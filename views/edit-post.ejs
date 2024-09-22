@@ -1,0 +1,38 @@
+<%- include("partials/header.ejs") %>
+
+<section class="container">
+    <div class="row align-items-start">
+        <div class="col">
+            <h1>Edit post</h1>
+        </div>
+    </div>
+    <form action="/save" method="POST">
+        <div class="row align-items-start">
+            <div class="col col-md-8 col-lg-6">
+                <div class="mb-2">
+                    <label for="exampleFormControlInput1" class="form-label">Your name</label>
+                    <input name="name" type="text" class="form-control bg-light-subtle" id="exampleFormControlInput1" value="<%= name %>" required>
+                </div>
+                <div class="mb-2">
+                    <label for="exampleFormControlInput2" class="form-label">Title</label>
+                    <input name="title" type="text" class="form-control bg-light-subtle" id="exampleFormControlInput2" value="<%= title %>" required>
+                </div>
+                <div class="mb-2">
+                    <label for="exampleFormControlTextarea1" class="form-label">Post</label>
+                    <textarea name="blogpost" class="form-control bg-light-subtle" id="exampleFormControlTextarea1" rows="3" required><%= blogpost %></textarea>
+                </div>
+                <input name="id" type="text" class="d-none" value="<%= id %>" required>
+                <input name="month" type="text" class="d-none" value="<%= month %>" required>
+                <input name="day" type="text" class="d-none" value="<%= day %>" required>
+                <input name="year" type="text" class="d-none" value="<%= year %>" required>
+                <div class="mb-3">
+                    <input type="submit" value="Save" class="btn btn-primary">
+                    <a href="/" class="btn btn-outline-secondary">Cancel</a>
+                </div>
+            </div>
+        </div>
+    </form>
+</section>
+
+
+<%- include("partials/footer.ejs") %>

@@ -1,0 +1,33 @@
+<%- include("partials/header.ejs") %>
+
+<section class="container">
+    <div class="row align-items-start">
+        <div class="col">
+            <h1>New post</h1>
+        </div>
+    </div>
+    <form action="/submit" method="POST">
+        <div class="row align-items-start">
+            <div class="col col-md-8 col-lg-6">
+                <div class="mb-2">
+                    <label for="exampleFormControlInput1" class="form-label">Your name</label>
+                    <input name="name" type="text" class="form-control bg-light-subtle" id="exampleFormControlInput1" placeholder="Jason Funderberker" required>
+                </div>
+                <div class="mb-2">
+                    <label for="exampleFormControlInput2" class="form-label">Title</label>
+                    <input name="title" type="text" class="form-control bg-light-subtle" id="exampleFormControlInput2" placeholder="Rock facts" required>
+                </div>
+                <div class="mb-2">
+                    <label for="exampleFormControlTextarea1" class="form-label">Post</label>
+                    <textarea name="blogpost" class="form-control bg-light-subtle" id="exampleFormControlTextarea1" rows="3" placeholder="Ain't that just the way..." required></textarea>
+                </div>
+                <div class="mb-3">
+                    <input type="submit" value="Submit" class="btn btn-primary">
+                </div>
+            </div>
+        </div>
+    </form>
+</section>
+
+
+<%- include("partials/footer.ejs") %>
